@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { RiArrowDownSLine } from 'react-icons/ri'
 import './navbar.scss'
 
 const Navbar = () => {
@@ -53,7 +54,10 @@ const Navbar = () => {
 					{currentUser && (
 						<div className='user' onClick={() => setOpen(!open)}>
 							<img src='./assets/images/ano.jpg' alt='' />
-							<span>{currentUser?.username}</span>
+							<span>
+								{currentUser?.username}
+								<RiArrowDownSLine />
+							</span>
 							{open && (
 								<div className='options'>
 									{currentUser?.isSeller && (
