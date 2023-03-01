@@ -1,0 +1,50 @@
+.orders {
+	display: flex;
+	justify-content: center;
+	.container {
+		width: 100%;
+		padding: 50px 30px;
+
+		.title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			button {
+				background-color: #1dbf73;
+				color: #fff;
+				font-weight: 500;
+				border: none;
+				padding: 10px;
+				cursor: pointer;
+			}
+		}
+		table {
+			width: 100%;
+			tr {
+				height: 50px;
+
+				th {
+					text-align: left;
+				}
+				td {
+					img {
+						width: 60px;
+						height: 30px;
+						object-fit: cover;
+					}
+					.my-del {
+						width: 30px;
+						height: 30px;
+						cursor: pointer;
+						color: #1dbf73;
+					}
+				}
+				// handle for even colors
+				&:nth-child(even) {
+					background-color: #1dbf730f;
+				}
+			}
+		}
+	}
+}

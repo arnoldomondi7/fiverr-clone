@@ -10,10 +10,14 @@ const Navbar = () => {
 	const [open, setOpen] = useState(false)
 
 	//set condition to alter the navbar when not in the homepage.
+	//pathname rep where we will be.
 	const { pathname } = useLocation()
 
 	//create a function to keep tabs of the scroll.
 	const isActive = () => {
+		//basically if we scroll, in y-direction.
+		//ste the active state to be true.
+		//else set the false.
 		window.scrollY > 0 ? setActive(true) : setActive(false)
 	}
 
@@ -41,7 +45,6 @@ const Navbar = () => {
 					<Link to='/' className='link'>
 						<span className='text'>Fiverr Clone</span>
 					</Link>
-
 					<span className='dot'>.</span>
 				</div>
 				<div className='links'>
@@ -123,6 +126,7 @@ const Navbar = () => {
 							Lifestyle
 						</Link>
 					</div>
+					<hr />
 				</>
 			)}
 		</div>

@@ -2,6 +2,9 @@ import React from 'react'
 import { AiFillStar } from 'react-icons/ai'
 import { AiFillLike } from 'react-icons/ai'
 import { AiFillDislike } from 'react-icons/ai'
+import { AiOutlineClockCircle } from 'react-icons/ai'
+import { FcCheckmark } from 'react-icons/fc'
+import { GrSync } from 'react-icons/gr'
 import Slider from 'infinite-react-carousel'
 import './gig.scss'
 
@@ -104,11 +107,15 @@ const Gig = () => {
 						<h2>Reviews</h2>
 						<div className='item'>
 							<div className='user'>
-								<img src='' alt='' />
+								<img src='../assets/images/mimi.jpg' alt='' className='ppp' />
 								<div className='info'>
 									<span>John Doe</span>
 									<div className='country'>
-										<img src='' alt='' />
+										<img
+											src='../assets/images/us.jpg'
+											alt=''
+											className='us-fl'
+										/>
 										<span>United States</span>
 									</div>
 								</div>
@@ -125,9 +132,9 @@ const Gig = () => {
 
 							<div className='helpful'>
 								<span>Helpful ?</span>
-								<AiFillLike />
+								<AiFillLike className='h-icon' />
 								<span>Yes</span>
-								<AiFillDislike />
+								<AiFillDislike className='h-icon' />
 								<span>No</span>
 							</div>
 						</div>
@@ -135,11 +142,15 @@ const Gig = () => {
 
 						<div className='item'>
 							<div className='user'>
-								<img src='' alt='' />
+								<img src='../assets/images/mimi.jpg' alt='' className='ppp' />
 								<div className='info'>
 									<span>John Doe</span>
 									<div className='country'>
-										<img src='' alt='' />
+										<img
+											src='../assets/images/us.jpg'
+											alt=''
+											className='us-fl'
+										/>
 										<span>United States</span>
 									</div>
 								</div>
@@ -156,9 +167,9 @@ const Gig = () => {
 
 							<div className='helpful'>
 								<span>Helpful ?</span>
-								<AiFillLike />
+								<AiFillLike className='h-icon' />
 								<span>Yes</span>
-								<AiFillDislike />
+								<AiFillDislike className='h-icon' />
 								<span>No</span>
 							</div>
 						</div>
@@ -166,7 +177,47 @@ const Gig = () => {
 						<hr />
 					</div>
 				</div>
-				<div className='right'></div>
+				<div className='right'>
+					<div className='price'>
+						<h3>1. AI Generated Image</h3>
+						<h2>$. 56.67</h2>
+					</div>
+					<p>Based on the given description, i create high quality image.</p>
+					<div className='details'>
+						<div className='item'>
+							<AiOutlineClockCircle className='right-clock' />
+							<span>3 days Delivery max.</span>
+						</div>
+
+						<div className='item'>
+							<GrSync className='right-clock' />
+							<span>3 revisons.</span>
+						</div>
+					</div>
+
+					<div className='features'>
+						<div className='item'>
+							<FcCheckmark className='f-check' />
+							<span>Prompt Writting</span>
+						</div>
+
+						<div className='item'>
+							<FcCheckmark className='f-check' />
+							<span>Art work Delivery</span>
+						</div>
+
+						<div className='item'>
+							<FcCheckmark className='f-check' />
+							<span>Image Upscalling</span>
+						</div>
+
+						<div className='item'>
+							<FcCheckmark className='f-check' />
+							<span>Additional Design</span>
+						</div>
+					</div>
+					<button>Continue</button>
+				</div>
 			</div>
 		</div>
 	)
